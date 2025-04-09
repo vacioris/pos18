@@ -137,6 +137,7 @@ class RFQCustomerPortal(CustomerPortal):
         request.env['vendor.quote.history'].sudo().create({
             'vendor_id': request.env.user.partner_id.id,
             'quoted_price': float(post.get('price')),
+            'brand': post.get('brand'),
             'estimate_date': post.get('delivery_date'),
             'note': post.get('additional_note'),
             'quote_id': post.get('rfq_id'),

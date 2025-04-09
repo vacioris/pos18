@@ -32,6 +32,8 @@ class VendorQuoteHistory(models.Model):
                                 domain="[('is_registered', '=', True)]",
                                 string="Vendor",
                                 help="Select Vendor")
+    brand = fields.Char(string="Brand", required=True, 
+                         help="Product brand name")
     quoted_price = fields.Monetary(currency_field='currency_id',
                                    help="Quoted Price")
     currency_id = fields.Many2one('res.currency', string='Currency',

@@ -62,6 +62,7 @@
                             <field name="vendor_quote_history_ids">
                                 <list editable="bottom">
                                     <field name="vendor_id"/>
+                                    <field name="brand"/>
                                     <field name="quoted_price"/>
                                     <field name="currency_id" invisible="1"/>
                                     <field name="estimate_date"/>

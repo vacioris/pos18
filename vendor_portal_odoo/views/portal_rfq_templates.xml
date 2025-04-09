@@ -196,6 +196,16 @@
                                             </div>
                                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 py-3">
                                                 <label class="se-form-label"
+                                                       for="brand">Brand
+                                                </label>
+                                                <input type="text"
+                                                       class="form-control se-form-control"
+                                                       id="brand"
+                                                       name="brand"
+                                                       required="true"/>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 py-3">
+                                                <label class="se-form-label"
                                                        for="delivery_date">
                                                     Delivery Date
                                                 </label>
@@ -284,6 +294,13 @@
                                                             &quot;display_currency&quot;: vendor_rfq.currency_id}"/>
                                     <strong>/</strong>
                                     <span t-field="vendor_rfq.product_id.sudo().uom_id.name"/>
+                                </div>
+                            </t>
+                            <t t-if="vendor_quote.brand">
+                                <br/>
+                                <div>
+                                    <b>My Brand :</b>
+                                    <t t-esc="vendor_quote.brand"/>
                                 </div>
                             </t>
                             <t t-if="vendor_quote.estimate_date">
