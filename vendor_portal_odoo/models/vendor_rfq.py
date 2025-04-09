@@ -1,24 +1,5 @@
 # -*- coding: utf-8 -*-
-#############################################################################
-#
-#    Cybrosys Technologies Pvt. Ltd.
-#
-#    Copyright (C) 2025-TODAY Cybrosys Technologies(<https://www.cybrosys.com>)
-#    Author: Cybrosys Techno Solutions(<https://www.cybrosys.com>)
-#
-#    You can modify it under the terms of the GNU LESSER
-#    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU LESSER GENERAL PUBLIC LICENSE (LGPL v3) for more details.
-#
-#    You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
-#    (LGPL v3) along with this program.
-#    If not, see <http://www.gnu.org/licenses/>.
-#
-#############################################################################
+
 from odoo import api, fields, models, _
 
 
@@ -33,7 +14,7 @@ class VendorRFQ(models.Model):
     product_id = fields.Many2one('product.product', string='Product',
                                  help="Select Product")
     quantity = fields.Float(string="Quantity", help="Quantity Required")
-    uom_id = fields.Many2one('uom.uom', string='UoM', help="UOM")
+ #   uom_id = fields.Many2one('uom.uom', string='UoM', help="UOM")
     estimated_quote = fields.Monetary("Estimated Quote",
                                       currency_field='currency_id',
                                       help="Estimated Quote Price")
