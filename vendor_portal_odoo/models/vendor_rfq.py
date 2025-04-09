@@ -14,7 +14,7 @@ class VendorRFQ(models.Model):
     product_id = fields.Many2one('product.product', string='Product',
                                  help="Select Product")
     quantity = fields.Float(string="Quantity", help="Quantity Required")
- #   uom_id = fields.Many2one('uom.uom', string='UoM', help="UOM")
+    uom_id = fields.Many2one('uom.uom', string='UoM', help="UOM")
     estimated_quote = fields.Monetary("Estimated Quote",
                                       currency_field='currency_id',
                                       help="Estimated Quote Price")
